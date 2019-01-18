@@ -20,5 +20,5 @@ module.exports = function (hashtags) {
     }
     result = result.reverse();
     var finalResult = result.join();
-    console.log(finalResult);
+    return finalResult;
 };
