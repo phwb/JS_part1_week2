@@ -18,8 +18,9 @@ module.exports = function (hashtags) {
         result.push(hashtags[i]);
         temp[hashtags[i]] = 1;
     }
-var finalResult = result.join();
-console.log(finalResult);
+    result = result.reverse();
+    var finalResult = result.join();
+    console.log(finalResult);
 };
 
 checks.js
