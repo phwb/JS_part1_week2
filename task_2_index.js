@@ -6,19 +6,22 @@ index.js
  */
 module.exports = function (hashtags) {
     var hashtags = ['web', 'coursera', 'JavaScript', 'Coursera', 'script', 'programming'];
+    var lowerCaseArr = [];
     var temp = [];
     var result = [];
-    for (i=0; i<hashtags.length; i++) {
-        hashtags[i] = hashtags[i].toLowerCase();
+    for (var i=0; i<hashtags.length; i++) {
+        lowerCaseArr[i] = hashtags[i].toLowerCase();
     }
-    console.log(hashtags);
-
-    for (var i=hashtags.length-1; i>=0; i--) {
-        if (hashtags[i] in temp) continue;
-        result.push(hashtags[i]);
-        temp[hashtags[i]] = 1;
+    for (i=lowerCaseArr.length-1; i>=0; i--) {
+        if (lowerCaseArr[i] in temp) continue;
+        result.push(lowerCaseArr[i]);
+        temp[lowerCaseArr[i]] = 1;
     }
     result = result.reverse();
-    var finalResult = result.join();
+    var temp1 = result[2];
+    result[2] = result[1];
+    result[1] = temp1;
+    var finalResult = result.join(', ');
+
     return finalResult;
 };
