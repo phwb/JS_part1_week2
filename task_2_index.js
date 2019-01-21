@@ -5,6 +5,7 @@ index.js
  * @returns {String}
  */
 module.exports = function (hashtags) {
+    
     var arr = [];
     for (var i=0; i<hashtags.length; i++) {
     arr[i] = hashtags[i].toLowerCase();
